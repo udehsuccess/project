@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+.formal {
+    display: grid;
+    height: auto;
+    grid-template-rows: auto 1fr auto;
+}
+
+.formal .basic-list {
+    text-align: center;
+    line-height:calc(6/2);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.formal .pay {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #bb0f0f;
+}
+
+.formal ul{
+  display: grid;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formal ul a{
+  text-decoration: none;
+  color: #bb0f0f;
+}
+
+.formal li span {
+  margin-left: 100px;
+}
+/* POPUP FORM */
+.formal .updated {
+  width: 100%;
+  height: 250px;
+  display: grid;
+}
+
+.formal .edit {
+  width: 100%;
+  height: 50px;
+  display: block;
+  padding-top: 50px;
+}
+
+.formal #edit {
+  margin-top: 10px;
+}
+
+.formal label {
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 12px;
+}
+
+.formal .stack {
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 5px rgba(0,0,0,0.1);
+  border: none;
+}
+
+
+.formal .btns {
+  width: 200px;
+  height: 40px;
+  margin-top: 12px;
+  margin-left: 50px;
+  background: #fec107;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  transition: 1s ease-out;
+  border: none;
+}
+
+/* Form styling */
+
+.fund{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.fund .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fec107;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .fund .form{
+    width: 100%;
+  }
+
+  .fund form .user-box{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .fund form .user-box label{
+     width: 200px;
+     color: #757575;
+     margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .fund form .user-box .form-control,
+.fund form .user-box .form-controls{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.fund form .user-box .form-controls{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.fund form .user-box .plan{
+    position: relative;
+    width: 100%;
+    height: 37px;
+  }
+
+  .fund form .user-box .plan:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+  }
+  
+  .fund form .user-box .plan select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+  }
+
+
+
+  .fund form .user-box .form-control:focus,
+.fund form .user-box .form-controls:focus,
+.fund form .user-box .plan select:focus{
+  border: 1px solid #fec107;
+}
+
+.fund form .user-box .submit{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.fund form .user-box .submit:hover{
+  background: #ffd658;
+}
+
+.fund form .user-box:last-child{
+  margin-bottom: 0;
+}
+
+table { 
+	width: 850px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+  /* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #35434d; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+  /* Pop Up Form */
+  .trigger{
+      text-align: center;
+    padding: 7px 13px;
+    background: #3e3e3e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+}
+
+@media (max-width:420px) {
+  .fund form .user-box{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fund form .user-box label{
+    margin-bottom: 5px;
+  }
+}
